@@ -5,6 +5,7 @@ require('dotenv').config()
 const   express   = require('express'),
         mongoose  = require('mongoose'),
         jwt       = require('jsonwebtoken'),
+        multer    = require('multer'),
         loaders   = require('./loaders'),
         server    = require('./server'),
         routes    = require('./routes'),
