@@ -1,11 +1,11 @@
-const server = async ({ app, mongoose, loaders, routes, controllers, jwt }) => {
+const server = async ({ app, mongoose, loaders, routes, controllers }) => {
     
     // Inyected controllers
-    const { handlerController }  = await loaders({ app, mongoose, controllers, jwt })
+    const { handlersControllers }  = await loaders({ app, mongoose, controllers })
 
-    await routes({ app, handlerController })
+    await routes({ app, handlersControllers })
 
-    const port  = 80
+    const port  = 3000;
 
     app.listen( port , err => {
             if (err) {

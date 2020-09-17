@@ -1,12 +1,15 @@
-const controllers = require('../controllers');
+const controllers = require('../controllers')
 
-const controllersLoader = async({mongoose}) =>{
-    const controllers_keys= Object.keys(controllers)
-    let inyected_controllers={};
+const controllersLoader = async ({ mongoose }) => {
 
-    await controllers_keys.forEach(control=>{
-        inyected_controllers[control]=controllers_keys[control]
-    })
-    console.log(inyected_controllers)
+    const keys_controllers = Object.keys( controllers )
+    let inyected_controllers = {}
+
+    await keys_controllers.forEach( control => {
+        inyected_controllers[ control ] = controllers[ control ]({mongoose})
+    });
+
+    return  inyected_controllers
 }
-module.exports = controllersLoader;
+
+module.exports = controllersLoader

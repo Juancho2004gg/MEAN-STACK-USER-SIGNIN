@@ -1,11 +1,9 @@
+  
+const routes = ({ app, handlersControllers }) => {
 
-const routes = ({ app, handlerController }) => {
+    const { AuthController, TestController } = handlersControllers
     
-    const { AuthController } = handlerController;
-
-    app.get('/api/login', (req,res)=> {
-        console.log('hola')
-    })
+    app.get( '/api/welcome', TestController.sayWelcome)
 
 }
 

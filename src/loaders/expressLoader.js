@@ -5,7 +5,6 @@ const express = require('express');
     
     app.get('/',(req,res)=>{
         res.send('api connected')
-        console.log('hola')
     });
     app.use(cors());
     app.use(express.urlencoded({extended:false}));    

@@ -1,16 +1,18 @@
-const controllersLoader = require('./controllersLoader');
-const mongooseLoader = require('./mongooseLoader');
-const expressLoader  = require('./expressLoader');
+const expressLoader     =   require('./expressLoader')
+const mongooseLoader    =   require('./mongooseLoader')
+const controllersLoader =   require('./controllersLoader')
 
-const loader = async({app,mongoose}) => {
-    await expressLoader({app});
-    await mongooseLoader({mongoose});
+ const loader = async ({ app, mongoose }) => {
     
-    const handlerController = await controllersLoader({mongoose})
+    await expressLoader({ app })
+    await mongooseLoader({ mongoose })
+    
+    const handlersControllers = await controllersLoader({ mongoose })
+
     return {
-        handlerController
+        handlersControllers
     }
 
 }
 
-module.exports = loader;
+module.exports = loader
