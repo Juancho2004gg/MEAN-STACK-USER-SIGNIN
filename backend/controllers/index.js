@@ -1,7 +1,9 @@
-const AuthController = require('./AuthController');
-const TestController = require('./TestController');
+const AuthController    =   require('./AuthController');
+const TestController    =   require('./TestController');
+const ImagesController  =   require('./ImagesController');
 
 module.exports = {  
     AuthController,
-    TestController
+    TestController,
+    ImagesController
 };

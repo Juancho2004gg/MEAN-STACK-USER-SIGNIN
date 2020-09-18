@@ -1,7 +1,9 @@
 
-const Products = require('Products')
+const Users     =   require('Users')
+const Images    =   require('Images');
 
 module.exports = {
-    Products,
+    Users,
+    Images
     // . . .
 }

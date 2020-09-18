@@ -1,7 +1,7 @@
-const server = async ({ app, mongoose, loaders, routes, controllers }) => {
+const server = async ({ app, mongoose, multer, loaders, routes, controllers }) => {
     
     // Inyected controllers
-    const { handlersControllers }  = await loaders({ app, mongoose, controllers })
+    const { handlersControllers }  = await loaders({ app, mongoose, multer,controllers })
 
     await routes({ app, handlersControllers })
 

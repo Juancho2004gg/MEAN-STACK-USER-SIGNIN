@@ -6,7 +6,7 @@ const express = require('express');
     app.get('/',(req,res)=>{
         res.send('api connected')
     });
-    app.use(cors());
+    app.use(cors('localhost:4200'));
     app.use(express.urlencoded({extended:false}));    
     
     return app;
