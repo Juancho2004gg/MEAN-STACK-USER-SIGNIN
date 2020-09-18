@@ -3,11 +3,15 @@ const express = require('express');
 
     const myServer = ({app}) =>{
     
-    app.get('/',(req,res)=>{
+        const corsOptions = {origin: "http://localhost:4200"}
+    
+        app.get('/',(req,res)=>{
         res.send('api connected')
-    });
-    app.use(cors('localhost:4200'));
-    app.use(express.urlencoded({extended:false}));    
+        });
+        
+        app.use(cors(corsOptions));
+    
+        app.use(express.urlencoded({extended:false}));    
     
     return app;
     

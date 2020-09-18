@@ -1,21 +1,20 @@
-const {Schema} = require('mongoose');
-const ObjectId = Schema.ObjectId;
+const mongoose = require('mongoose');
+const ObjectId = mongoose.Schema.ObjectId;
 
-const commentSchema = new Schema({
-    image_id:{type:Object.id},
-    email:{type:String},
-    name:{type:String},
-    comment:{type:String,required:true}
-},
-{
-    versionKey:false,
-    timestamps:true
-})
+const CommentSchema = new mongoose.Schema({
+  image_id: { type: ObjectId },
+  email: { type: String },
+  name: { type: String },
+  comment: { type: String },
+  timestamp: { type: Date, default: Date.now }
+});
 
-commentSchema.virtual('image').set(image=>{
-    return this._image = image;
-}).get(()=>{
-    return this._image
-})
+CommentSchema.virtual('image')
+  .set(function(image) {
+    this._image = image;
+  })
+  .get(function () {
+    return this._image;
+  });
 
-module.exports=mongoose.model('Comments',commentSchema);
+module.exports = mongoose.model('Comment', CommentSchema);

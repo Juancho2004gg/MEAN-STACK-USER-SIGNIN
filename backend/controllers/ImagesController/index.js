@@ -1,4 +1,4 @@
-
+const Images = require('../../models/Images')
 
 const ImagesController = ({app}) =>{
 
