@@ -1,8 +1,10 @@
 
 
-const ImagesController = ({multer}) =>{
+const ImagesController = ({app}) =>{
 
-   upload: async(req,res)
+   upload: async(req,res)=>{
+      res.send('connected api')
+   }
 
 
 }

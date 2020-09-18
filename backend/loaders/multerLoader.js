@@ -1,5 +1,4 @@
-var async = require('async');
-var _ = require('lodash');
+
 const multer = require('multer')
 
 const multerLoader = () =>{
