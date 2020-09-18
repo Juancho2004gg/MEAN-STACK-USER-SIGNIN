@@ -1,6 +1,6 @@
 
 
-const ImagesController = ({app,mongoose}) =>{
+const ImagesController = ({multer}) =>{
 
    upload: async(req,res)
 

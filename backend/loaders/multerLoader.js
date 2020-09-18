@@ -1,6 +1,8 @@
+var async = require('async');
+var _ = require('lodash');
 const multer = require('multer')
 
-const multerLoader = ({multer}) =>{
+const multerLoader = () =>{
 
   const storage = multer.diskStorage({
     destination: function(req, file, cb){

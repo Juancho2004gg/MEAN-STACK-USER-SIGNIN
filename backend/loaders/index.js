@@ -7,7 +7,7 @@ const multerLoader      =   require('./multerLoader');
     
     await expressLoader({ app })
     await mongooseLoader({ mongoose })
-    await multerLoader({ multer })
+    await multerLoader
     
     const handlersControllers = await controllersLoader({ mongoose })
 
