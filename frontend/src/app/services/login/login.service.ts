@@ -13,7 +13,7 @@ export class LoginService {
   constructor(private http: HttpClient) { 
     this.LoginUsers = new Users();
   }
-  login(user: Users){
+  postUser(user: Users){
     return this.http.post('http://localhost:3000/api/login', Users);
   }
   
