@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/authService/auth.service';
+import { LoginService } from 'src/app/services/login/login.service';
 import { Users } from 'src/app/models/users/users';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
-  providers:[AuthService]
+  providers:[LoginService]
 })
 export class AuthComponent implements OnInit {
 
-  constructor(public authService: AuthService ) { }
+  constructor(public loginService: LoginService ) { }
   
   ngOnInit(): void {
   }

@@ -5,16 +5,16 @@ import { Users } from 'src/app/models/users/users';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class LoginService {
 
-  AuthUsers: Users;
+  LoginUsers: Users;
   UserList: Users[];
-  readonly URL_API = 'http://localhost:3000/api/auth' 
   
   constructor(private http: HttpClient) { 
-    this.AuthUsers = new Users();
+    this.LoginUsers = new Users();
   }
-  login(Users: Users){
-    return this.http.post(this.URL_API, Users);
+  login(user: Users){
+    return this.http.post('http://localhost:3000/api/login', Users);
   }
+  
 }
