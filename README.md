@@ -1,2 +1,2 @@
-# IMG-SHARE
-Red social tipo imgur.com
+# Aplicación que permite registrar usuarios
+
